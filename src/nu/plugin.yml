@@ -1,0 +1,30 @@
+name: ModTRSBot
+main: nu.nerd.modtrsbot.ModTRSBot
+version: 0.1
+author: Deaygo Jarkko
+
+commands:
+  mtb:
+    description: Perform commands on ModTRSBot
+	usage: /<command> [connect|disconnect|reload]
+	
+permissions:
+  modtrsbot.*:
+    description: Symlink to modtrsbot.admin
+    children:
+	  modtrsbot.admin: true
+  modtrsbot.admin:
+    description: Give all permissions
+	children:
+	  modtrsbot.connect: true
+	  modtrsbot.disconnect: true
+	  modtrsbot.reload: true
+  modtrsbot.connect:
+    description: Allow a player to make the bot connect
+	default: op
+  modtrsbot.disconnect:
+    description: Allow a player to make the bot disconnect
+	default: op
+  modtrsbot.reload:
+    description: Allow a player to cause the bot to reload the configuration. If the bot is connected, it will disconnect and reconnect with the provided settings.
+	default: op
