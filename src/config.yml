@@ -1,0 +1,11 @@
+irc:
+  server: ''
+  port: 0
+  username: ''
+  realname: ''
+  connect_command: ''
+  auto_connect: false
+  channel: ''
+  msgprefix: ''
+commands:
+  prefix: '@'

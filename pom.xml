@@ -31,6 +31,13 @@
 			<artifactId>bukkit</artifactId>
 			<version>1.1-R4-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>yetanotherx.bukkit</groupId>
+			<artifactId>ModTRS</artifactId>
+			<version>2.1</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/ModTRS.jar</systemPath>
+		</dependency>
 	</dependencies>
 	<repositories>
 		<repository>
@@ -53,6 +60,7 @@
 				<directory>${basedir}/src</directory>
 				<includes>
 					<include>plugin.yml</include>
+					<include>config.yml</include>
 				</includes>
 			</resource>
 		</resources>
